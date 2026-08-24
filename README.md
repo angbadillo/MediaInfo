@@ -94,11 +94,15 @@ se deja la ventana fina: ahí cada pico *es* un frame clave, y eso sí es inform
 
 ## Licencia
 
-El código de la app es tuyo. El `ffprobe` que se incrusta procede de la fórmula de Homebrew,
-compilada con `--enable-gpl` (incluye x264 y x265), así que **el `.app` resultante queda
-cubierto por la GPL v3**. Para uso personal no hay nada que hacer; para distribuirlo a
-terceros hay que cumplir la licencia (ofrecer el código fuente correspondiente) o compilar
-con `--no-ffprobe` o con un FFmpeg LGPL.
+Este repositorio contiene sólo código propio: no incluye FFmpeg ni sus binarios, que
+`build.sh` toma de la instalación local de Homebrew al empaquetar. Publicarlo no distribuye
+FFmpeg, así que la GPL no le afecta.
+
+Otra cosa es el `.app` ya construido: el `ffprobe`/`ffmpeg` de Homebrew viene compilado con
+`--enable-gpl` (incluye x264 y x265), de modo que **el bundle queda cubierto por la GPL v3**.
+Para uso personal no hay nada que hacer. Si algún día se lo pasas a alguien, o cumples la
+licencia (ofrecer el código correspondiente) o lo compilas con `--no-ffprobe` o contra un
+FFmpeg LGPL.
 
 La firma es *ad hoc*: suficiente para ejecutar en tu Mac. Distribuir a otros equipos
 requiere Developer ID y notarización.
